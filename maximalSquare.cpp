@@ -1,3 +1,8 @@
+#include <algorithm>
+#include <vector>
+#include <iostream>
+using namespace std;
+
 //Given an m x n binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
 class Solution {
 public:
@@ -21,3 +26,12 @@ public:
         return maxSize * maxSize;
     }
 };
+
+int main()
+{
+    vector<vector<char>> matrix = {{'1','1','1','1','0'},{'1','1','1','1','0'},{'1','1','1','1','1'},{'1','1','1','1','1'},{'0','0','1','1','1'}};
+    Solution s;
+
+    cout << s.maximalSquare(matrix) << endl;
+    return 0;
+}
